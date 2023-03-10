@@ -8,9 +8,9 @@ Originally used in computer graphics to generate procedural texture for objects.
 
 ### P5 
 
-`randon(a,b)`
+`randon(min,max)`
 
-`noise(a,b)`
+`noise(xoff)`
 
 ### 1D noise
 

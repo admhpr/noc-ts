@@ -42,6 +42,7 @@ function setup() {
 		}
         p.draw = function() {
 			p.clear(0,0,0,0)
+          
             if(currentDrawFunction) {
                 currentDrawFunction(p);
             }

@@ -1,13 +1,12 @@
 import p5 from 'p5'
 
+let xoff = 0
 export function draw(
   p: p5,
-  { height, width }: {height: number, width: number}
+  { height, width }: {height: number, width: number},
 ) {
-  console.log("yp")
-  let xoff = 0;
+  // console.log("random", p.random())
   let xincrement = 0.01;
-
   // Black transparent background
   p.fill(0, 10);
   p.rect(0, 0, width, height);
@@ -25,4 +24,7 @@ export function draw(
   // Draw the ellipse at the value produced by perlin noise
   p.fill(200);
   p.ellipse(x, height / 2, 64, 64);
+  return {
+    xoff
+  }
 }
