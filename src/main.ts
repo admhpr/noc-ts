@@ -1,6 +1,6 @@
 import './style.css'
 import p5 from 'p5'
-import { draw as noiseDraw } from './intro/noise1D'
+import { draw as noiseDraw } from './intro/noise1d'
 let currentDrawFunction: (p: p5) => void;
 let app: p5;
 
@@ -35,18 +35,19 @@ sketch3Button!.addEventListener('click', () => {
 })
 
 function setup() {
-    app = new p5(p => {
+    app = new p5((_) => {
+        const p = _ as p5
 		p.setup = function() {
 			p.createCanvas(p.windowWidth, p.windowHeight);
 		}
         p.draw = function() {
-			p.clear()
+			p.clear(0,0,0,0)
             if(currentDrawFunction) {
                 currentDrawFunction(p);
             }
         }
     });
-    sketchManager(sketch2Draw);
+    sketchManager(sketch3Draw);
 }
 
 setup();
