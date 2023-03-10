@@ -39,6 +39,7 @@ function setup() {
         const p = _ as p5
 		p.setup = function() {
 			p.createCanvas(p.windowWidth, p.windowHeight);
+    
 		}
         p.draw = function() {
 			p.clear(0,0,0,0)

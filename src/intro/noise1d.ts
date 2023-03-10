@@ -7,8 +7,7 @@ export function draw(
 ) {
   // console.log("random", p.random())
   let xincrement = 0.01;
-  // Black transparent background
-  p.fill(0, 10);
+  p.fill("#333");
   p.rect(0, 0, width, height);
 
   // Try this to compare to noise
@@ -22,8 +21,9 @@ export function draw(
   xoff += xincrement;
 
   // Draw the ellipse at the value produced by perlin noise
-  p.fill(200);
+  p.fill(255);
   p.ellipse(x, height / 2, 64, 64);
+
   return {
     xoff
   }
